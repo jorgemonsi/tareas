@@ -1,2 +1,2 @@
 # tareas
-DOO
+Diseño Orientado a Objetos
