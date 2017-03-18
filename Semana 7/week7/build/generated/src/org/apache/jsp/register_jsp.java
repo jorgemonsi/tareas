@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -41,35 +41,34 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
-
-    if(session.getAttribute("username") != null)
-        response.sendRedirect("profile.jsp");
-
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title> Inicio sesion </title>\n");
+      out.write("        <title>Register/title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        \n");
-      out.write("        <h1> Bienvenidos </h1>\n");
-      out.write("            <form action=\"LoginController\" method=\"POST\">\n");
-      out.write("                <label> Usuario </label>\n");
-      out.write("                <input type=\"text\" name=\"txt-usuario\" value=\"\">\n");
-      out.write("                <br />\n");
-      out.write("                <label> Contraseña </label>\n");
-      out.write("                <input type=\"password\" name=\"password\" value=\"\">\n");
-      out.write("                <br/>\n");
-      out.write("                <input type=\"submit\" value=\"Iniciar Sesion\">\n");
-      out.write("                <p> o </p>\n");
-      out.write("                <a href=\"register.jsp\">Registrate</a>\n");
-      out.write("                <br/>\n");
-      out.write("            </form>\n");
-      out.write("                               \n");
+      out.write("        <h1>Registro</h1>\n");
+      out.write("        <form action=\"RegisterController\" method=\"POST\">\n");
+      out.write("            <label>Nombre</label>\n");
+      out.write("            <input type=\"text\" name=\"txt-nombre\" value=\"\">\n");
+      out.write("            <br/>\n");
+      out.write("            <label>Apellido</label>\n");
+      out.write("            <input type=\"text\" name=\"txt-apellido\" value=\"\">\n");
+      out.write("            <br/>\n");
+      out.write("            <label>Usuario</label>\n");
+      out.write("            <input type=\"text\" name=\"txt-usuario\" value=\"\">\n");
+      out.write("            <br/>\n");
+      out.write("            <label> Contraseña </label>\n");
+      out.write("            <input type=\"password\" name=\"txt-password\" value=\"\">\n");
+      out.write("            <br/>\n");
+      out.write("            <label> Repetir Contraseña </label>\n");
+      out.write("            <input type=\"password\" name=\"txt-repassword\" value=\"\">\n");
+      out.write("            <br/>\n");
+      out.write("            <input type=\"submit\" value=\"Registrar\"/>\n");
+      out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
